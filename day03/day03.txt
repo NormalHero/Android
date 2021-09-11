@@ -1,0 +1,55 @@
+
+
+0. UI 단위 
+	일반크기 : dp, px, pt, in, mm
+		 dp : 밀도 독립적 픽셀(Density-Independent Pixels)
+	텍스트사이즈 : sp - 배율 독립적 픽셀(Scale-Independent Pixels)
+
+1. Layout
+
+	 gravity : 정렬 설정, 내가 기준  // layout_gravity : 부모가 기준
+	 margin : 간격 설정 Outer // padding : 간격 설정 inner
+
+
+	1. LinearLayout orient   1-1. vertical
+				width - match_parent, 
+				height - wrap_content 
+			
+				height 0dp layout_weight 으로 비율 설정
+
+
+			      1-2. horizontal 
+				width - wrap_content
+				height - match_parent
+
+				width 0dp layout_weight 으로 비율 설정
+
+	2. FrameLayout
+		- 왼쪽 상단에만 컴포넌트가 추가되는 layout
+		- 각자의 영역을 가지지 않고, 자식 컴포넌트 끼리 겹침
+		- gravity 속성이 없음
+		- 자식 컴포넌트에서 layout_gravity로 정렬 가능
+
+	3. RelativeLayout -> ConstraintLayout - ios
+	- 특정 컴포넌트를 기준점(guide line)으로 잡고 상호 관계를 설정하는 layout
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
