@@ -1,0 +1,55 @@
+
+
+id 정하는 규칙
+TextView : tvTest
+EditText : dtTest
+Button : btnTest
+
+
+*** UI 만드는, 컨트롤 하는 공식 ***
+
+1. layout xml 이쁘게 만든다.
+2. 위젯들 id를 부여한다.
+	TextView : tvXXX
+	EditText : etXXX
+	Button : btnXXX
+
+3. Activitiy의 멤버 변수로 위젯들을 선언한다.
+  * 변수이름은 위젯 id와 동일하게 명명
+
+4. Activity 내 onCreate 메소드 안에서 findViewById로 연결
+	ex) tvInput = findViewById(R.id.tvInput);
+
+- setOnClickListener
+- setOnCheckedChangeListener
+- setText();
+- getText();
+- setBackgroudColor()
+- setEnabled(false);
+- setVisibility(View.VISIBLE);
+- isChecked();
+
+
+* Listener 인터페이스, 익명클래스를 사용
+  어떤 사용자 Input 이 있거나, 상태가 변하는 걸 감지해서 시스템이 자동으로 호출해주는 메소드
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
