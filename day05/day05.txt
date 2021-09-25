@@ -1,0 +1,55 @@
+
+Toast
+	- 일정 시간이 지나면 자동으로 사라지는 메시지
+	- 화면 하단에 표시 됨
+	Toast.makeText(context, 메시지, 표시시간).show();
+	* 표시시간 옵션 Toast.LENGTH_SHORT/LONG
+
+AlertDialog
+	- 팝업 창
+	- 타이틀, 메시지, 버튼 3개
+	- AlertDialog.Builder 클래스를 이용
+	- setCancelable(false) //창 밖 터치시 종료 옵션
+	- 커스터마이징 해서 사용할 수도 있음
+
+ImageView
+scaleType
+ 1. center : 비율&크기 유지, 가운대 정렬, 벗어나면 잘림, 작으면 여백
+ 2. centerCrop : 비율 유지, 짧은 쪽이 기준, 벗어나면 잘림
+ 3. centerInside : 비율 유지, 긴 쪽이 기준, 남으면 여백, 작으면 무효
+ 4. fitCenter : 비율 유지, 긴 쪽이 기준, 남으면 여백, 작으면 늘림
+ 5. fitStart : 비율 유지, 왼쪽 상단부터 시작, 남으면 여백
+ 6. fitEnd : 비율 유지, 우측 하단부터 시작, 남으면 여백
+ 7. fitXY : 비율 X, 꽉 채움
+ 8. matrix : 비율&크기 유지, 왼쪽 상단을 기준, 벗어나면 잘림, 남으면 여백
+
+ + 원안에 넣기(JAVA 소스로)
+    setBackground(new ShapeDrawable(new OvalShape());
+    setClipToOutline(true);
+
+----------------------------------------------------------------------------------------------------
+
+Activity : 화면에 표시되는 UI 구성을 위해 가장 기본이 되는 요소
+  1. App은 최소 1개 이상의 Activity로 구성
+  2. setContentView를 통해서 xml을 통해 UI를 그림
+  3. Activity는 AndroidManifest.xml 파일을 통해 관리됨
+     수정해서 시작 Activity를 변경할 수도 있음
+  4. 기본적으로 Android Activity는 BackStack 구조이다.
+     startActivity()를 통해 실행 시키면, 기존 Activity는 뒤에 숨어 있다.
+  5. finish() 통해 Activity 종료 가능
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
