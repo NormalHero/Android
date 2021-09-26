@@ -1,0 +1,30 @@
+
+Activity : 화면에 표시되는 UI 구성을 위해 가장 기본이 되는 요소
+    setContentView : XML을 통해서 UI 그려주는 메소드 
+    finish : Activity 종료
+
+Activity Life Cycle(생명주기)
+onCreate** 생성시 최초 1회, 가장 먼저 호출, 필수 구현, UI 관련 작업을 한다(setContentView, findViewByid)
+onStart 사용자에게 보여지기 직전 호출
+onResume** 사용자가 App과 상호 작용 할 수 있는 상태
+onPause** 중지, 사용자와 App이 상호 작용 불가, 입력 불가 ( 통신, 이미지 처리 등의 작업 중지 )
+onStop 더 이상 보이지 않음 
+onRestart onStop 상태에서 재시작 될 때 호출
+onDestroy** 종료 직전 호출 ( 리소스 해제 )
+
+intent : 서로 다른 컴포넌트 간의 통신 매개체 
+
+Andoroid 4대 컴포넌트 
+1. Activity
+2. Service
+3. Broadcast Receiver
+4. Content Provider
+
+명시적 intent : Activity 간 이동시 사용
+암시적 intent : 시스템 기능 사용(전화, 브라우저, 카메라 등)
+
+
+
+
+
+
