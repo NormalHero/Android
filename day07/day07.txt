@@ -1,0 +1,39 @@
+1. focus 이동
+    etPw.requestFocus();
+    inputMethodManager imm =(inputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+    imm.showSoftinput(etPw, inputMethodManager.SHOW_IMPLICIT)
+
+2. 커서 올렸을 때 이벤트
+    setOnHoverListener 사용
+
+3. EditText 문자 변화 감지
+ .addTextChangedListner(new TextWatcher(){
+     onTextChanged에 소스 작성 
+ })
+
+
+
+
+
+** Context : 어플리케이션이나 객체의 현재 상태를 나타내주는 역할
+액티비티와 어플리케이션의 정보를 얻기 위해 사용함
+UI, 리소스, 데이터베이스, shared preference 등에 접근에 사용 
+
+
+ListView 
+1. 기본 리스트 뷰 : 안드로이드에서 기본으로 제공하는 String 타입 하나만 출력하는 리스트 뷰
+ 데이터 추가, 수정, 삭제, 업데이트
+ 
+
+
+ 실습 #1 
+ 1. Empty Activity 추가
+    ListActivity -> activity_list.xml ( -> LinearLayout )
+
+    * 보여주는 UI 작성, id랑 배치 제공
+
+    MainActivity Login 버튼 및에 button 추가 id : btnList, 리스너 달아서 -> List Activity로 이동 ListActivity 버튼 3개랑 onClickListener 추가, EditText, ListView findViewByid 
+
+
+Data - >  Adapter    -> UI
+    
