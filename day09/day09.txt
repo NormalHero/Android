@@ -1,0 +1,49 @@
+
+여태까지 정리 --------------
+UI - .xml
+    LinearLayout - orientation
+    FreamLayout
+    ConstraintLayout
+    
+    TextView, EditText, Button, ImageView 
+
+    weight (멀티해상도 대응에 용이)
+    margin, padding
+    gravity : 내가 가지고 있는 놈들이 어떻게 정렬되냐 
+    layout_gravity : 레이아웃 안에서 내가 어떤 포지션이냐 ( 부모에서 내가 )
+
+
+
+기능 - Activity.java
+
+1. layout.xml에 UI를 만든다.
+2. 컴포넌트에 id를 부여한다. 
+3. Activity에 멤버 변수로 UI Component를 선언해준다.
+ -> 클래스 이름은  xml에 썻던 것과 같은 이름 
+4. findViewByID로 매칭 
+5. listener, 메소드 등을 사용
+
+Activity Life Cycle 
+1. onCreate 
+2. onStart
+3. onResume
+4. onPause
+5. onStop
+6. onDestroy 
+
+
+
+Intent - Activity 이동, Data전달 
+Content
+
+Log.d ("태그", " 로깅 할 내용"); // e, w 
+Toast
+AlertDioalog
+
+ListView <-   Adapter    -> Data 
+CustomAdapter - xml로 ui를 메모리에 올리는 
+
+RecyckerViwe
+ - > Holder 강제
+
+프로젝트폴더\app\build\outputs\apk\debug\ ~~.apk 로 스마트폰에 설치가능
