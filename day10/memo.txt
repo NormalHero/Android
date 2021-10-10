@@ -1,0 +1,38 @@
+Fragment
+1. Activity와 매우 흡사
+    - onCreate -> onCreateView -> 
+
+2. Activity에 올려서 씀 
+    - 모듈화, 재사용에 용이 
+
+3. FragmentManager,
+    FragmentTransaction
+        - 추가, 수정, 삭제
+        시작 : transcation.beginTranscation
+        작업 : add, replace
+        완료 : transaction.commit();
+
+4. Fragment -> BackStack 
+5. Context는 getContext를 이용해 불러온다.
+6. Activity의 기능을 사용하고 싶으면
+        getActivity로 소속된 activity를 불러올 수 있다.
+        -> Activity이동 및 finish는 Activity에서만 하는걸 권장 
+
+
+Activity -> Fragment 데이터 전달
+
+    1. Fragment Method를 만든다.
+            void setText(String input){}
+    2. Activity에서 Fragment Method를 만든다. 
+
+Fragment -> Activity 데이터 전달
+    * interface를 이용한 listener 사용
+
+Fragment
+    1. Fragment 내 인터페이스 및 추상메소드 정의
+    2. Fragment 멤버 변수로 인터페이스 선언
+    3. 인터페이스를 할당할 수 있는 메소드 작성
+    4. Event 발생시 인터페이스 멤버변수.추상메소드(데이터) 호출
+
+Activity
+    1.Fragment에서 만든 메소드로 인터페이스 지정하면서 익명클래스 활용
