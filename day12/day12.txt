@@ -1,0 +1,85 @@
+Gradle : Build Tool
+Android Studio 프로젝트와 Build Tool인 Gradle 서로 독립적이다. 
+
+파일은 2갸거 생성
+    Project: AppName
+        - gradle 버전
+        - 저장소 경로
+        - clean 규칙 
+
+    Module: AppName.app 
+        - android setting
+            sdk 버전(complie, target, min)
+            App version code 및 name 
+        -buildTypes
+            minifyEnabled : 난독화 여부
+            proguardFiles : 난독화 규칙이 정의된 파일 지정
+
+            * 난독화 : apk를 해킹해서 소스코드를 열었을 때, 쉽게 유추하지 못하도록 
+                        class 이름, 변수 이름, 메소드 이름 등을 무의미한 알파벳으로 변경시켜 주는 것 
+
+
+        - compileOptions : JAVA SDK 버전 지정 
+        - dependencies : 라이브러리 관리 
+
+Compile SDK VS Target SDK VS Min SDK 
+
+Min SDK : App이 지원할 최소 안드로이드 버전 
+            실제로 Min SDK 버전 아래의 기계에서는 설치 불가(apk)
+            Play Store에서도 검색 불가 
+            
+Compile SDK : 빌드할 때 사용 될 SDK 버전(컴파일, 빌드 시에만 영향을 줌)            
+                - 최신 버전을 권장 
+
+Target SDK : 런타임 주는 SDK 버전 (컴파일에 영향을 주지않음), 런타임 동작 해당 버전으로 하겠다. 
+                해당 버전까지는 정상 테스트가 완료되었다. 
+
+Runtime 퍼미션 : API lev 23 부터 (실행중 사용자에게 물어보는)
+
+SDK 버전 관계
+min <= target <= complie
+ex target이 min보다 낮으면 오류발생
+
+이상적인 셋팅
+min <= target == compile 
+
+
+Android permission (권한)
+설치시 권한 - 일반 권한 , 서명 권한
+
+런타임 권한 - 위험 권한, 실행 중 반드시 사용자에게 동의를 구해야 하는 권한
+        CALENDAR 
+        CAMERA 
+        CONTACTS(연락처)
+        LOCATION 
+        MICROPHONE  // .RECORD_AUDIO
+        PHONE - 통화기록, 전화 걸기 
+        BODY_SENSORS
+        SMS 읽기 쓰기 
+        STOREAGE READ_EXTERNAL_STORAGE, WRITE 
+
+
+checkSelfPermission(Manifest.permission.CAMERA)
+ - 단순 권한이 있는지 확인
+
+requestPermissions
+ - 실제 권한 동의 팝업 표출
+
+onRequestPermissionsResult
+ - 권한 동의 팝업 결과 콜백
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
