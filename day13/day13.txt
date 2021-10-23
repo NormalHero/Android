@@ -1,0 +1,40 @@
+SharedPerference 
+ : 간단한 데이터를 기기에 저장하는 방법
+    - 내가 만든 앱에서 사용할 데이터를 저장, 로드 
+    - .xml로 저장
+    - KEY - VALUE 쌍 (Entity, Map)
+    - editor.put자료타입("KEY", value);
+    - editor.clear() 전체삭제
+    - editor.remove("key") 개별삭제
+    - 항상 수정 작업 완료 후에는 editor.apply()
+
+    apply() - 비동기 , commit() - 동기식
+
+
+안드로이드에서의 Thread
+- 안드로이드 UI는 기본적으로 싱글 스레드 모델 
+- UI Thread = Main Thread
+☆ UI Thread에서는 시간이 오래 걸리는 작업을 피해야함 . 
+    ex) 네트워크 통신, 이미지, 동영상 처리, 파일관련
+
+
+- ANR ( Applitcation Not Response )
+ 메인 스레드에서 오래걸리는 작업을 해서 OS에서 앱을 중지한 경우 A
+
+**** UI Thread 외에는 UI를 업데이트 할수 없다 ****
+
+Looper, Message Queue, Message, Handler  => 스레드간 통신을 위해 필요하다
+
+    Handler : 처리를 담당 (주어)
+    Message(=Runnable) : 처리 될 일(목적어)
+    Message Queue : 메시지 보관함
+    Looper : 컨베이어 벨트, Message Queue에서 주기적으로 Message 꺼내서  Handler로 전달 한다
+
+
+Handler는 독립적으로 작동이 불가능하다. 
+*   기본 생정자를 통해 Handler를 생성하면, 호출한 쓰레드의
+    Message Queue, Looper와 자동으로 연결된다. 
+
+
+
+
