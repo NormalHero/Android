@@ -1,0 +1,43 @@
+Handler를 통해 Message 전달하는 방법
+
+- 보내는 쪽 
+        1. Message 생성
+        Message msg = mHandler.obtainMessage()
+        msg.what = SEND_INFO(); // Message Type 설정
+        msg.obj = data ; // 전달 할 데이터 
+
+        2. mHandler.sendMessage();  // 데이터가 있는 경우
+           mHandler.sendEmpyMessage(메시지 타입);  // 단순 이벤트 전달 
+
+- 받는 쪽 
+        1. Handler mHandler = new Handler(Looper.getMainLooper()){
+            handleMessage 오버라이딩
+
+        };
+
+        2. handleMessage 내 처리
+                message 타입에 따라 실행할 코드 작성 
+
+* HTTP Protocol
+        Client의 요청(Request)이 있을 때만 Server에서 응답(Response)하여
+        해당 정보를 전송하고 곧바로 연결을 종료하는 방식
+
+        1. Client가 요청을 보내는 경우에만 Server가 응답하는 단방향 통신
+        2. Server로 부터 응답을 받은 후에는 연결이 바로 종료
+        3. 실시간 연결 x
+        4. 자원손실 x 
+
+
+- GET : 데이터를 가져올 때 사용
+- POST : 데이터를 보낼 때 
+
+* JSON
+    [
+        {
+            "KEY1" : "VALUE1",
+            "KEY2" : "VALUE2"
+         },
+         {
+
+         }.....
+    ]
