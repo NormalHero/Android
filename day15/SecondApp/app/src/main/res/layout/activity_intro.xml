@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".IntroActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="대 문"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#FF8787"
+        android:text="Home" />
+
+    <Button
+        android:id="@+id/btnDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F3CB56"
+        android:text="DRAWER" />
+
+    <Button
+        android:id="@+id/btnTAB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#D68AE3"
+        android:text="TAB" />
+</LinearLayout>

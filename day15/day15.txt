@@ -1,0 +1,16 @@
+
+실제 기능 및 UI는 WEB이고 껍대기만 App(Andoroid/IOS) 
+-> WebApp
+
+Hybrid App
+1소스 Andoroid/Ios 빌드 다 가능
+
+-> React-Native(js), Flutter(Dart), Xamarin(c#)
+
+Native App -> 순수 App(Java, KT / swift)
+성능기술 제일우수 
+
+Native App      Hybrid App      WebApp
+                               업데이트가 간편(HTML/css/jsp등 자체 수정으로가능)
+
+
