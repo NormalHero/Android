@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Avery/AndroidPoject/ThirdApp/app/src/main/res/layout/activity_main.xml" value="0.37777777777777777" />
+        <entry key="..\:/Avery/AndroidPoject/workspace/ThirdApp/app/src/main/res/layout/activity_contact.xml" value="0.24010416666666667" />
+        <entry key="..\:/Avery/AndroidPoject/workspace/ThirdApp/app/src/main/res/layout/activity_handler.xml" value="0.38697916666666665" />
+        <entry key="..\:/Avery/AndroidPoject/workspace/ThirdApp/app/src/main/res/layout/activity_main.xml" value="0.3648148148148148" />
+        <entry key="..\:/Avery/AndroidPoject/workspace/ThirdApp/app/src/main/res/layout/activity_network.xml" value="0.25" />
+        <entry key="..\:/Avery/AndroidPoject/workspace/ThirdApp/app/src/main/res/layout/activity_photo.xml" value="0.25" />
+        <entry key="..\:/Avery/AndroidPoject/workspace/ThirdApp/app/src/main/res/layout/activity_pref.xml" value="0.3648148148148148" />
+        <entry key="..\:/Avery/AndroidPoject/workspace/ThirdApp/app/src/main/res/layout/activity_web_view.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

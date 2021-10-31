@@ -1,0 +1,38 @@
+Content Provider
+: 서로 다른 앱들 끼리 데이터를 전달할 수 있는 방법
+    - ContentProvider 제공(발신)
+    - ContentResolver
+
+
+    ThirdApp -> ContentProvider -> Second -> IntroActivity Resolver로 데이터 받기
+
+    Manifest에서
+    android:exported="true" 로 되어있어야 데이터 이동가능
+    데이터가 안받아진다면 
+    android:readPermission="com.avery.thirdapp.read" 로 전송하는 쪽에 추가해 줘야한다. 
+    + <uses-permission android:name="com.avery.thirdapp.read" 도 해준다 
+    
+
+연락처 가져오기
+
+1. Manifest에 권한 추가
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+2. Manifest에 런타인 권한 획득
+
+        if(checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
+                || checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED){
+
+            String[] permission ={Manifest.permission.CAMERA, Manifest.permission.READ_CONTACTS};
+            requestPermissions(permission, 1004); // 1004 리퀘스트 코드
+
+
+3. contactsActivity 
+    1. PhoneBook Inner Class 생성
+    2. Resolver에 Query 요청
+        String[] perjection : 어떤 데이터를 가져올건지
+
+    3. Cursor
+
+        - 각 columnIndex를 가져오기
+        - columnIndex를 통해 각 데이터를 가져오기
