@@ -1,0 +1,49 @@
+
+Andorid Service 
+1. Service란? 
+    Background 작업을 위한 구성 요소 
+    <-> Activity - Foreground 
+
+    ex) 음악 재생, 파일 입출력, 네트워크 처리 
+
+2. Service 종류
+1) Background Service 
+    사용자에게 직접 보이지 않는 작업을 수행
+    App을 꺼도 백그라운드에서 계속 수행
+    startService() 실행 -> onStartCommand 콜백 부터
+
+2) Binding Service 
+    Activity에 종속적인 Service, 바인딩 
+    Activity <-> Service 상호작용 주 목적
+    서버 - 클라이언트 구조와 유사
+    bindService() 바인딩 -> onBind 콜백부터
+    * Activity가 종료되면 같이 종료 (unBind)
+
+3) Foreground Service
+    사용자에게 직접 보이는 작업 수행 
+    서비스 안정성 유지 및 계속해서 실행하기 위해 
+    Notification이랑 같이 사용 
+
+
+3. Service Callback
+    1- onCreate 
+        최초 1회 호출, 이미 실행 중이면 onCreate는 Skip 
+
+    2- onStartCommand, onBind
+        서비스가 시작 될 때, 서비스가 바인드될 때 호출
+        onBind를 사용하면 onStartCommand가 생략된다.
+
+    3- onDestroy()
+        서비스가 소멸 될 때 호출, 각종 리소스를 정리 
+
+4. Service 소멸
+ * 메모리 부족으로 인해 안드로이드 시스템이 강제로 소멸시킬 수 있다. 
+
+ 1) 서비스가 강제로 소멸할 가능성 
+    - Background Service : 높음 (안정성 보장 x)
+    - Binding Service : Binding 된 Activity가 살아 있을 경우 낮음 
+    - Foreground Service : 희박
+
+2) 소멸 되었을 때 재실행 
+    onStartCommand -> return에 옵션을 재실행 옵션을 설정 할 수 있음
+    ex) START_STICKY, START_NOT_STICKY  
