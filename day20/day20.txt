@@ -1,0 +1,25 @@
+Acitivity 
+
+- Back Stack
+
+FLAG_ACTIVITY_REORDER_TO_FRONT
+기존에 실행중인 액티비티가 있으면 앞으로 가져온다.
+
+FLAG_ACTIVITY_CLEAR_TOP
+상위 스택을 제거
+기존에 실행 중인 액티비티 있으면 새로 시작하지 않고 쌓여있는 스택을 삭제
+ex) ABCDE 에서 C를 실행 시키면 ABC 가 됨
+
+FLAG_ACTIVITY_SINGLE_TOP
+액티비티가 이미 최상단에 있는 경우 다시 시작하지 않음(최상단에 있는 경우)
+: onPaue() -> onNewIntent()-> onResume()
+
+FLAG_ACTIVITY_NO_HISTORY
+
+intent.setFlag : 1개만
+intent.addFlag : + 
+
+
+Acitivity Task 
+
+Acitivity Affinity(동족, 친화력) 
