@@ -1,0 +1,39 @@
+
+
+* Restful API 
+
+HTTP(S)
+1. GET  : 데이터를 읽을 떄
+2. POST : 데이터를 추가(생성) 할 때 
+3. PUT  : 데이터를 수정 할 떄(업데이트)
+4. DELETE : 데이터를 지울 때
+
+GET 
+http://10.5.2.1/api/member - 멤버 리스트 전체 
+.../member/1 		   - id가 1인 멤버 정보 
+
+POST
+../member		   - 회원 추가
+BODY에 JSON Data 추가 
+{
+	loginId : jang
+	password : 1111
+	name : 유저1
+}
+
+PUT
+.../member/2
+BODY에 JSON Data 추가
+{
+	password:2222
+	name :  유저2
+}
+
+DELETE
+.../ member/3
+
+
+http://118.67.142.45:8080/api/member?type=4
+GET/posttype=0
+
+
