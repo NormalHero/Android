@@ -1,0 +1,30 @@
+
+
+
+HTTp Method
+	post - 만들 때(Create) 
+		/api/member - body
+	get - 데이터 가져오기
+		/api/member?type=4
+		/api/member/1
+	put - update 
+		/api/member/5	- body
+	delete - /api/member/7 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://velog.io/@jhsung23/Android-%EA%B5%AC%EA%B8%80-%EB%A1%9C%EA%B7%B8%EC%9D%B8-API-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
+
+https://firebase.google.cn/docs/auth/android/google-signin?hl=ko
+ https://develop-writing.tistory.com/32
